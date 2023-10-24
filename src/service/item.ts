@@ -20,9 +20,20 @@ const getCars = async () => {
 const getCar = async (id: string) => {
 
   const responseItem = await ItemModel.findOne({_id: id});
-  
+
   return responseItem;
   
 };
 
-export { insertCard, getCar, getCars };
+const updateCar = async ( id: string, data: Car) => {
+
+  const responseItem = await ItemModel.findOneAndUpdate(
+    {_id:id}, 
+    data, 
+    { new: true }
+  );
+  
+  return responseItem;
+}
+
+export { insertCard, getCar, getCars, updateCar };
