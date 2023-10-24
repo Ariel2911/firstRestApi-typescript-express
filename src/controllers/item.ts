@@ -7,7 +7,7 @@ const getItem = async ({params}: Request, res: Response) => {
 
     const {id} = params;
 
-    const responseItem = await getCar(id);
+    const responseItem = await getCar(id) || "NOT_FOUND";
     res.send(responseItem);
 
   }catch(e) {
