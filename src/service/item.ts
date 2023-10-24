@@ -9,4 +9,12 @@ const insertCard = async (item: Car) => {
 
 };
 
-export { insertCard };
+const getCars =async () => {
+
+  const responseItem = await ItemModel.find({});
+
+  return responseItem;
+  
+}
+
+export { insertCard, getCars };
