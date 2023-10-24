@@ -9,12 +9,20 @@ const insertCard = async (item: Car) => {
 
 };
 
-const getCars =async () => {
+const getCars = async () => {
 
   const responseItem = await ItemModel.find({});
 
   return responseItem;
   
-}
+};
 
-export { insertCard, getCars };
+const getCar = async (id: string) => {
+
+  const responseItem = await ItemModel.findOne({_id: id});
+  
+  return responseItem;
+  
+};
+
+export { insertCard, getCar, getCars };

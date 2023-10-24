@@ -1,12 +1,17 @@
 import { Request, Response } from "express";
 import { handleHttp } from "../utils/error.handle";
-import { getCars, insertCard } from "../service/item";
+import { getCar, getCars, insertCard } from "../service/item";
 
-const getItem = (req: Request, res: Response) => {
+const getItem = async ({params}: Request, res: Response) => {
   try {
 
+    const {id} = params;
+
+    const responseItem = await getCar(id);
+    res.send(responseItem);
+
   }catch(e) {
-    handleHttp(res, 'ERROR_GET_ITEM')
+    handleHttp(res, 'ERROR_GET_ITEM', e)
   }
 };
 
@@ -17,7 +22,7 @@ const getItems = async (req: Request, res: Response) => {
     res.send(responseItem)
 
   }catch(e) {
-    handleHttp(res, 'ERROR_GET_ITEMS')
+    handleHttp(res, 'ERROR_GET_ITEMS', e)
   }
 };
 
