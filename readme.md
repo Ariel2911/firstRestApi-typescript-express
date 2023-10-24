@@ -1,4 +1,4 @@
-# Api rest escalable y sostenible con Typescript y Express
+# Api rest construida con Typescript y Express
 
 🚧 Proyecto en construcción 🚧
 
@@ -31,13 +31,13 @@ Debes tener instalado Node.js y npm.
 1. Clona el repositorio en tu máquina local:
 
 ```bash
-git clone https://github.com/Ariel2911/el-proyecto.git
+git clone https://github.com/Ariel2911/firstRestApi-typescript-express.git
 ```
 
 2. Ve al directorio del proyecto:
 
 ```bash
-cd el-proyecto
+cd firstRestApi-typescript-express
 ```
 
 3. Instala las dependencias:
