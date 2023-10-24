@@ -34,6 +34,14 @@ const updateCar = async ( id: string, data: Car) => {
   );
   
   return responseItem;
-}
+};
 
-export { insertCard, getCar, getCars, updateCar };
+const deleteCar = async (id: string) => {
+
+  const responseItem = await ItemModel.deleteOne({_id: id});
+
+  return responseItem;
+  
+};
+
+export { deleteCar, insertCard, getCar, getCars, updateCar };
