@@ -1,5 +1,5 @@
 import { Car } from "../interfaces/car.interface";
-import ItemModel from "../models/item";
+import ItemModel from "../models/item.model";
 
 const insertCard = async (item: Car) => {
 
